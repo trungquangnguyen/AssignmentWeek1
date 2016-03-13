@@ -14,5 +14,5 @@ Time spent: 14 hours spent in total
 
 ## Video Walkthrough 
 
-![Video Walkthrough]( gif/Mar 13, 2016 18/09.gif
+![Video Walkthrough]( /gif/Mar 13%2C 2016 18:09.gif
 )
