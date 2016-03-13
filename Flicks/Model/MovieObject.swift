@@ -16,7 +16,7 @@ class MovieObject: NSObject {
     var overview : NSString?
     var time : NSString?
     var release_date : NSString?
-    var popularity : NSString?
+    var popularity : NSInteger?
     
     init(dic: NSDictionary){
             self.poster_path = dic.objectForKey("poster_path") as? NSString
@@ -27,7 +27,7 @@ class MovieObject: NSObject {
             self.overview = dic["overview"] as? NSString
 //        self.time = dic.objectForKey("time") as! NSString
             self.release_date = dic.objectForKey("release_date") as? NSString
-            let popularity = dic.objectForKey("popularity") as? NSInteger
-            self.popularity = "\(popularity)"
+            self.popularity = dic.objectForKey("popularity") as? NSInteger
+
     }
 }

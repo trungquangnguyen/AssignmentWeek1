@@ -19,7 +19,13 @@ class MovieDetailViewController: UIViewController {
     
     @IBOutlet weak var imgBackgroung: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var lblPopularity: UILabel!
+    @IBOutlet weak var lblTime: UILabel!
     
+    @IBOutlet weak var lblOverView: UILabel!
+    @IBOutlet weak var lblReleaseDate: UILabel!
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var subScrollView: UIView!
     var model: MovieObject!
     
     override func viewDidLoad() {
@@ -35,16 +41,15 @@ class MovieDetailViewController: UIViewController {
         let contentWidth = scrollView.bounds.width
         let contentHeight = scrollView.bounds.height + 20
         scrollView.contentSize = CGSizeMake(contentWidth, contentHeight)
+        let subviewHeight = scrollView.bounds.height
+        let frame = CGRectMake(0, 0, contentWidth, subviewHeight).insetBy(dx: 5, dy: 5)
+        self.subScrollView = UIView(frame: frame)
         
-//        let subviewHeight = scrollView.bounds.height
-        
-//        let frame = CGRectMake(0, 0, contentWidth, subviewHeight).insetBy(dx: 5, dy: 5)
-//        self.subScrollView = UIView(frame: frame)
-//        subScrollView.backgroundColor = UIColor.grayColor()
-//        subScrollView.alpha = 0.5
-//        scrollView.addSubview(subScrollView)
-        
-        
+        //set Value for subview
+        lblTitle.text = model.title as? String
+        lblReleaseDate.text = model.release_date as? String
+      
+        lblOverView.text = model.overview as? String
     }
 
     override func didReceiveMemoryWarning() {
