@@ -26,6 +26,12 @@
 		109D312E1C9433CE00A01F57 /* TopRatedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D312A1C9433CE00A01F57 /* TopRatedTableViewController.swift */; };
 		109D312F1C9433CE00A01F57 /* TopRatedTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109D312B1C9433CE00A01F57 /* TopRatedTableViewController.xib */; };
 		109D31311C94374300A01F57 /* MovieObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D31301C94374300A01F57 /* MovieObject.swift */; };
+		10B6C9D21C95865F0055061A /* fav.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B6C9CC1C95865F0055061A /* fav.png */; };
+		10B6C9D31C95865F0055061A /* fav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B6C9CD1C95865F0055061A /* fav@2x.png */; };
+		10B6C9D41C95865F0055061A /* fav@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B6C9CE1C95865F0055061A /* fav@3x.png */; };
+		10B6C9D51C95865F0055061A /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B6C9CF1C95865F0055061A /* time.png */; };
+		10B6C9D61C95865F0055061A /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B6C9D01C95865F0055061A /* time@2x.png */; };
+		10B6C9D71C95865F0055061A /* time@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B6C9D11C95865F0055061A /* time@3x.png */; };
 		F302BCF41ED0CF68B5F9F6EF /* Pods_Flicks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524288A781F7C253575FC9D5 /* Pods_Flicks.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +57,12 @@
 		109D312A1C9433CE00A01F57 /* TopRatedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRatedTableViewController.swift; sourceTree = "<group>"; };
 		109D312B1C9433CE00A01F57 /* TopRatedTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopRatedTableViewController.xib; sourceTree = "<group>"; };
 		109D31301C94374300A01F57 /* MovieObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieObject.swift; sourceTree = "<group>"; };
+		10B6C9CC1C95865F0055061A /* fav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fav.png; sourceTree = "<group>"; };
+		10B6C9CD1C95865F0055061A /* fav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav@2x.png"; sourceTree = "<group>"; };
+		10B6C9CE1C95865F0055061A /* fav@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav@3x.png"; sourceTree = "<group>"; };
+		10B6C9CF1C95865F0055061A /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
+		10B6C9D01C95865F0055061A /* time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@2x.png"; sourceTree = "<group>"; };
+		10B6C9D11C95865F0055061A /* time@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@3x.png"; sourceTree = "<group>"; };
 		524288A781F7C253575FC9D5 /* Pods_Flicks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flicks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A28DD78D9F66411A159AF4 /* Pods-Flicks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flicks/Pods-Flicks.debug.xcconfig"; sourceTree = "<group>"; };
 		9C7D14AABA1BE9D1954F19BA /* Pods-Flicks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flicks/Pods-Flicks.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +91,12 @@
 		101730681C9539A2000D74BE /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				10B6C9CC1C95865F0055061A /* fav.png */,
+				10B6C9CD1C95865F0055061A /* fav@2x.png */,
+				10B6C9CE1C95865F0055061A /* fav@3x.png */,
+				10B6C9CF1C95865F0055061A /* time.png */,
+				10B6C9D01C95865F0055061A /* time@2x.png */,
+				10B6C9D11C95865F0055061A /* time@3x.png */,
 				1017305C1C953987000D74BE /* nowplaying.png */,
 				1017305D1C953987000D74BE /* nowplaying@2x.png */,
 				1017305E1C953987000D74BE /* nowplaying@3x.png */,
@@ -270,14 +288,20 @@
 			files = (
 				1048E5371C9564D500708517 /* MovieDetailViewController.xib in Resources */,
 				109D312D1C9433CE00A01F57 /* NowPlayingTableViewController.xib in Resources */,
+				10B6C9D71C95865F0055061A /* time@3x.png in Resources */,
 				1073FF051C9467D30043BAC9 /* MovieUITableViewCell.xib in Resources */,
 				101730651C953987000D74BE /* Rating.png in Resources */,
+				10B6C9D31C95865F0055061A /* fav@2x.png in Resources */,
+				10B6C9D21C95865F0055061A /* fav.png in Resources */,
 				102619E71C930E13006829BC /* LaunchScreen.storyboard in Resources */,
 				101730621C953987000D74BE /* nowplaying.png in Resources */,
 				109D312F1C9433CE00A01F57 /* TopRatedTableViewController.xib in Resources */,
 				101730631C953987000D74BE /* nowplaying@2x.png in Resources */,
+				10B6C9D51C95865F0055061A /* time.png in Resources */,
+				10B6C9D61C95865F0055061A /* time@2x.png in Resources */,
 				102619E41C930E13006829BC /* Assets.xcassets in Resources */,
 				101730671C953987000D74BE /* Rating@3x.png in Resources */,
+				10B6C9D41C95865F0055061A /* fav@3x.png in Resources */,
 				101730641C953987000D74BE /* nowplaying@3x.png in Resources */,
 				101730661C953987000D74BE /* Rating@2x.png in Resources */,
 			);

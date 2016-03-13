@@ -28,6 +28,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var subScrollView: UIView!
     var model: MovieObject!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(colorLiteralRed: 240.0/255.0, green: 187.0/255.0, blue: 90.0/255.0, alpha: 1)
@@ -48,8 +49,9 @@ class MovieDetailViewController: UIViewController {
         //set Value for subview
         lblTitle.text = model.title as? String
         lblReleaseDate.text = model.release_date as? String
-      
         lblOverView.text = model.overview as? String
+        lblPopularity.text = model.popularity as? String
+        self.setTime()
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +61,37 @@ class MovieDetailViewController: UIViewController {
     
 
     // MARK: - Private Method
+    func setTime(){
+        let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
+        let url = NSURL(string: "https://api.themoviedb.org/3/movie/293660?api_key=\(apiKey)")
+        let request = NSURLRequest(
+            URL: url!,
+            cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData,
+            timeoutInterval: 10)
+        
+        let session = NSURLSession(
+            configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
+            delegate: nil,
+            delegateQueue: NSOperationQueue.mainQueue()
+        )
+        let task: NSURLSessionDataTask = session.dataTaskWithRequest(request,
+            completionHandler: { (dataOrNil, response, error) in
+                if let data = dataOrNil {
+                    if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(
+                        data, options:[]) as? NSDictionary {
+                            
+                            let nf = NSNumberFormatter()
+                            nf.numberStyle = .NoStyle
+                            let time = responseDictionary.objectForKey("runtime") as? NSInteger
+                            self.lblTime.text = nf.stringFromNumber(time!)! as String
+                    }
+                }
+        })
+        task.resume()
+    }
+    
+
+    
     func faceImage(path: NSString, resolution: ResolutionImg){
          MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         let imageRequest = NSURLRequest(URL: NSURL(string: resolution.rawValue  + (path as String) )!)
