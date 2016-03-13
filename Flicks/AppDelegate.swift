@@ -15,7 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        let tabbar = UITabBarController()
+        tabbar.tabBar.barTintColor = UIColor(colorLiteralRed: 240.0/255.0, green: 187.0/255.0, blue: 90.0/255.0, alpha: 0.8)
+        let nowPlaying = UINavigationController(rootViewController: NowPlayingTableViewController())
+        nowPlaying.tabBarItem = UITabBarItem(title:"NowPlaying", image:UIImage(named: "nowplaying"), selectedImage:nil)
+        let topRated = UINavigationController(rootViewController: TopRatedTableViewController())
+        topRated.tabBarItem = UITabBarItem(title:"TopRated", image: UIImage(named: "Rating"), selectedImage:nil)
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        //note
+        if let window = self.window {
+            tabbar.viewControllers = [nowPlaying ,topRated]
+            window.rootViewController = tabbar
+        }
+        self.window?.backgroundColor = UIColor.blackColor()
+        self.window?.makeKeyAndVisible()
         return true
     }
 
