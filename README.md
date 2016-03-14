@@ -1,5 +1,6 @@
-# AssignmentWeek1 FILCKS app
-Assignment 1 (CoderSchool)
+# Project 1 - *Flicks*
+
+**Name of your app** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
 This application for iOS 8 or later.
 
@@ -9,22 +10,49 @@ Time spent: 14 hours spent in total
 
 ## User Stories
 
-* [x]  User can view a list of movies currently playing in theaters from The Movie Database. Poster images must be loaded asynchronously.
-* [x] User can view movie details by tapping on a cell.
-* [x] User sees loading state while waiting for movies API. You can use one of the 3rd party libraries listed on CocoaControls.
-* [ ] User sees an error message when there's a networking error. You may not use UIAlertController or a 3rd party library to display the error. See this screenshot for what the error message should look like.
-* [x] User can pull to refresh the movie list.
-* [x] Add a tab bar for Now Playing or Top Rated movies. (high)
-* [ ] Implement a UISegmentedControl to switch between a list view and a grid view. (high)
-* [x] Add a search bar. (med)
-* [x] All images fade in as they are loading. (low)
-* [ ] For the large poster, load the low-res image first and switch to high-res when complete. (low)
-* [x] Customize the highlight and selection effect of the cell. (low)
-* [x] Customize the navigation bar. (low)
+The following **required** functionality is completed:
 
+- [x] User can view a list of movies currently playing in theaters. Poster images load asynchronously.
+- [x] User can view movie details by tapping on a cell.
+- [x] User sees loading state while waiting for the API.
+- [x] User sees an error message when there is a network error.
+- [x] User can pull to refresh the movie list.
 
-## Video Walkthrough 
+The following **optional** features are implemented:
 
-![Video Walkthrough]( /gif/Mar 13%2C 2016 18:09.gif
-)
+- [x] Add a tab bar for **Now Playing** and **Top Rated** movies.
+- [ ] Implement segmented control to switch between list view and grid view.
+- [x] Add a search bar.
+- [x] All images fade in.
+- [ ] For the large poster, load the low-res image first, switch to high-res when complete.
+- [x] Customize the highlight and selection effect of the cell.
+- [x] Customize the navigation bar.
+
+The following **additional** features are implemented:
+
+- [ ] List anything else that you can get done to improve the app functionality!
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
 ![Video Walkthrough]( /gif/Mar 13%2C 2016 19:08.gif )
+
+## Notes
+
+Describe any challenges encountered while building the app.
+
+## License
+
+    Copyright [yyyy] [name of copyright owner]
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
