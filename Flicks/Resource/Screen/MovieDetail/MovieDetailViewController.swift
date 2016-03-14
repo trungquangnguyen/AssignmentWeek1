@@ -125,7 +125,13 @@ class MovieDetailViewController: UIViewController {
                 MBProgressHUD.hideHUDForView(self.view, animated: true)
             },
             failure: { (imageRequest, imageResponse, error) -> Void in
-                // do something for the failure condition
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                    if error.code == -1009 {
+                        print("\(error.domain)")
+                        let alert = UIAlertController(title: "Error", message: "Network Error", preferredStyle: UIAlertControllerStyle.Alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+                        self.presentViewController(alert, animated: true, completion: nil)
+                    }
         })
     }
 
