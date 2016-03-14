@@ -114,6 +114,16 @@ class NowPlayingTableViewController: UITableViewController,UISearchBarDelegate {
                             MBProgressHUD.hideHUDForView(self.tableView, animated: true)
                             self.tableView.reloadData()
                     }
+                }else{
+                    MBProgressHUD.hideHUDForView(self.tableView, animated: true)
+                    if let domainError = error{
+                        if domainError.code == -1009 {
+                            print("\(domainError.domain)")
+                            let alert = UIAlertController(title: "Error", message: "Network Error", preferredStyle: UIAlertControllerStyle.Alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+                            self.presentViewController(alert, animated: true, completion: nil)
+                        }
+                    }
                 }
         })
         task.resume()
@@ -151,6 +161,16 @@ class NowPlayingTableViewController: UITableViewController,UISearchBarDelegate {
                             }
                             self.searchData(self.currentSearch)
                             self.refrestControl.endRefreshing()
+                    }
+                }else{
+                    MBProgressHUD.hideHUDForView(self.tableView, animated: true)
+                    if let domainError = error{
+                        if domainError.code == -1009 {
+                            print("\(domainError.domain)")
+                            let alert = UIAlertController(title: "Error", message: "Network Error", preferredStyle: UIAlertControllerStyle.Alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+                            self.presentViewController(alert, animated: true, completion: nil)
+                        }
                     }
                 }
         })
@@ -191,6 +211,16 @@ class NowPlayingTableViewController: UITableViewController,UISearchBarDelegate {
                             self.isMoreDataLoading = false
                             self.searchData(self.currentSearch)
                             self.refrestControl.endRefreshing()
+                    }
+                }else{
+                    MBProgressHUD.hideHUDForView(self.tableView, animated: true)
+                    if let domainError = error{
+                        if domainError.code == -1009 {
+                            print("\(domainError.domain)")
+                            let alert = UIAlertController(title: "Error", message: "Network Error", preferredStyle: UIAlertControllerStyle.Alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+                            self.presentViewController(alert, animated: true, completion: nil)
+                        }
                     }
                 }
         })

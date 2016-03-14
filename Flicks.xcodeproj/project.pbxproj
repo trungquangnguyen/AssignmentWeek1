@@ -84,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				1017305A1C9527BE000D74BE /* InfiniteScrollActivityView.swift */,
+				106515881C9655FE005EA68A /* APIManager */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -156,6 +157,13 @@
 				1048E5351C9564D500708517 /* MovieDetailViewController.xib */,
 			);
 			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		106515881C9655FE005EA68A /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIManager;
 			sourceTree = "<group>";
 		};
 		1073FF011C94678A0043BAC9 /* View */ = {

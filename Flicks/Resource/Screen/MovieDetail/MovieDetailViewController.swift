@@ -85,7 +85,18 @@ class MovieDetailViewController: UIViewController {
                             let time = responseDictionary.objectForKey("runtime") as? NSInteger
                             self.lblTime.text = nf.stringFromNumber(time!)! as String
                     }
+                } else{
+                    MBProgressHUD.hideHUDForView(self.view, animated: true)
+                    if let domainError = error{
+                        if domainError.code == -1009 {
+                            print("\(domainError.domain)")
+                            let alert = UIAlertController(title: "Error", message: "Network Error", preferredStyle: UIAlertControllerStyle.Alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+                            self.presentViewController(alert, animated: true, completion: nil)
+                        }
+                    }
                 }
+
         })
         task.resume()
     }
